@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd">
+    <persistence-unit name="tienda-frontend_PU">
+        <jta-data-source>java:jboss/datasources/tienda-frontend_DS</jta-data-source>
+        <mapping-file>META-INF/nativeQueries.xml</mapping-file>
+        <properties>
+            <!-- Properties for Hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="javax.persistence.lock.timeout" value="-2"/>
+            <property name="hibernate.cache.use_second_level_cache" value="false"/>
+        </properties>
+        <class>com.xtesoft.tienda.entities.Persona</class>
+    </persistence-unit>
+</persistence>
