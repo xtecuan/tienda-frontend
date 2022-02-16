@@ -1,21 +1,45 @@
-## ${artifactId} WildFly JSF with CDI, JAX-RS, Microprofile-config and persistence bootable JAR project
-
-This Project shows how to combine JSF, CDI, JAX-RS, Microprofile-config  and JPA. 
-
-## Running the project
-* Run: `shs/pack-run.sh` or `bats\pack-run.bat`
+# tadeocrud-heroku
 
 
-## Development mode (watch of your source files)
-* Run: `shs/devmode-watch.sh` or `bats\devmode-watch.bat` (this goal builds your application, build an hollow bootable JAR and start it)
-* Do changes in your sources, your application is rebuilt and redeployed.
-* When done: Ctrl-C in the console to kill the running goal and bootable JAR.
+For Running the Appliance:
+
+mvn clean install
+
+mvn payara-micro:start
+
+
+For Access to the Web Application:
+
+http://localhost:8080/
+
+Credencials:
+
+ADMIN ROLE
+
+User: xtecuanufo@gmail.com 
+
+Password: Welcome123$$$123
+
+USER ROLE
+
+User: juliux@gmail.com
+
+Password: HolaHola$$$123
+
+
+DB CONSOLE
+
+Saved Settings: Generic H2 (Server)
+
+Driver Class: org.h2.Driver
+
+JDBC URL: jdbc:h2:tcp://localhost:50008/~/H2SampleDB
+
+User Name: sa
+
+Password: Welcome123$$1
 
 
 
-## Developer Mode  (with re-packaging)
-* Start devmode: `shs/devmode-start.sh` or `bats\devmode-start.bat`
-* Make some code changes
-* Publish changes: `shs/devmode-publish.sh` or `bats\devmode-publish.bat`
-* Stop devmode: `shs/devmode-stop.sh` or `bats\devmode-stop.bat`
-* Access devmode logs: `shs/devmode-logs.sh` or `bats\devmode-logs.bat`
+
+
