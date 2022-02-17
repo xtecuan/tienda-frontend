@@ -6,7 +6,7 @@
     <context-param>
         <description>URL For Sample Database</description>
         <param-name>db.url</param-name>
-        <param-value>jdbc:h2:tcp://localhost:50008/~/H2SampleDB;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE;DATABASE_TO_UPPER=true;IGNORECASE=TRUE;MVCC=TRUE;LOCK_TIMEOUT=600000</param-value>
+        <param-value>jdbc:h2:tcp://localhost:50008/~/H2SampleDB;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE;DATABASE_TO_UPPER=true;IGNORECASE=TRUE;LOCK_TIMEOUT=600000</param-value>
     </context-param>
     <context-param>
         <description>System Administrator for H2 Database</description>
