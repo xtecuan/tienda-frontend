@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="866a04ff-d216-47c4-9663-d8f9b4b18d27" name="Changes" comment="cambios deploy" />
+    <list default="true" id="866a04ff-d216-47c4-9663-d8f9b4b18d27" name="Changes" comment="cambios deploy">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/livejournal/xtecuan/microprofile/web/beans/utils/UserSessionBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/livejournal/xtecuan/microprofile/web/beans/utils/UserSessionBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/rieckpil/blog/LoginBacking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/rieckpil/blog/LoginBacking.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +82,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1645052400008</updated>
-      <workItem from="1645052402226" duration="9280000" />
+      <workItem from="1645052402226" duration="9783000" />
     </task>
     <task id="LOCAL-00001" summary="cambios deploy">
       <created>1645052996777</created>
@@ -116,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645068003466</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="cambios deploy">
+      <created>1645068334048</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1645068334048</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

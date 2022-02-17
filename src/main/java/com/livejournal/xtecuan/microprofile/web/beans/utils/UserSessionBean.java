@@ -11,6 +11,8 @@
 package com.livejournal.xtecuan.microprofile.web.beans.utils;
 
 import com.livejournal.xtecuan.microprofile.entities.Users;
+import com.xtesoft.tienda.clientes.dto.ClienteDTO;
+
 import java.io.Serializable;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
@@ -23,15 +25,15 @@ import javax.inject.Named;
 @SessionScoped
 public class UserSessionBean implements Serializable {
 
-    private Users user;
+    private ClienteDTO user;
 
     private String passwordChange;
 
-    public Users getUser() {
+    public ClienteDTO getUser() {
         return user;
     }
 
-    public void setUser(Users user) {
+    public void setUser(ClienteDTO user) {
         this.user = user;
     }
 

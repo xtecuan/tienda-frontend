@@ -3,6 +3,8 @@ package de.rieckpil.blog;
 import com.livejournal.xtecuan.microprofile.facade.UsersFacade;
 import com.livejournal.xtecuan.microprofile.web.beans.utils.UserSessionBean;
 import com.livejournal.xtecuan.microprofile.web.beans.utils.XBaseBean;
+import com.xtesoft.tienda.clientes.TiendaBackendClient;
+
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
@@ -43,7 +45,7 @@ public class LoginBacking extends XBaseBean {
     private FacesContext facesContext;
 
     @Inject
-    private UsersFacade usersFacade;
+    private TiendaBackendClient usersFacade;
 
     @Inject
     private UserSessionBean currentUser;
