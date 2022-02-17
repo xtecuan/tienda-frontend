@@ -3,16 +3,13 @@ package com.xtesoft.tienda.clientes;
 import com.xtesoft.tienda.clientes.dto.ClienteDTO;
 import com.xtesoft.tienda.clientes.dto.UserDTO;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.eclipse.microprofile.rest.client.RestClientBuilder;
 
-import javax.annotation.PostConstruct;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
-import javax.ws.rs.client.ClientBuilder;
-import javax.ws.rs.client.Entity;
-import javax.ws.rs.client.Invocation;
-import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import java.net.URI;
+
 
 @ApplicationScoped
 public class TiendaBackendClient {
@@ -23,25 +20,19 @@ public class TiendaBackendClient {
     @ConfigProperty(name = "tienda.backend.clientes")
     String clientes;
 
-    private WebTarget webTargetBase;
-    private WebTarget webTargetAuth;
 
-    @PostConstruct
-    void init(){
-        webTargetBase = ClientBuilder.newClient().target(baseurl);
-        webTargetAuth = ClientBuilder.newClient().target(clientes).path("findByEmailAndPass");
-    }
 
     public ClienteDTO findByEmailAndPass(String correoe,String clave){
+        ClienteDTO clienteDTO = null;
         UserDTO user = new UserDTO(correoe,clave);
-        Invocation.Builder invocationBuilder = webTargetAuth.request(MediaType.APPLICATION_JSON);
-        Response response = invocationBuilder.post(Entity.entity(user,MediaType.APPLICATION_JSON));
-        System.out.println("url: "+clientes);
-        System.out.println("Status: "+response.getStatus());
-        if(response.getStatus() == 200){
-            return (ClienteDTO) response.getEntity();
-        }else{
-            return null;
+        try {
+            URI apiUri = new URI(clientes);
+            TiendaApiService tiendaApiService = RestClientBuilder.newBuilder().baseUri(apiUri)
+                    .build(TiendaApiService.class);
+            clienteDTO = tiendaApiService.getSingle(user);
+        }catch (Exception ex){
+            System.err.println(ex);
         }
+        return clienteDTO;
     }
 }
