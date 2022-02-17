@@ -13,6 +13,5 @@ import javax.ws.rs.core.MediaType;
 @RegisterRestClient
 public interface AuthClient {
     @POST
-    @Path("/findByEmailAndPass")
     public ClienteDTO findByEmailAndPass(UserDTO userDTO);
 }
