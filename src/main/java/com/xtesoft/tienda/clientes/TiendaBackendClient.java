@@ -20,8 +20,8 @@ public class TiendaBackendClient {
     @ConfigProperty(name = "tienda.backend.baseurl")
     String baseurl;
     @Inject
-    @ConfigProperty(name = "tienda.backend.clientes.auth")
-    String authurl;
+    @ConfigProperty(name = "tienda.backend.clientes")
+    String clientes;
 
     private WebTarget webTargetBase;
     private WebTarget webTargetAuth;
@@ -29,14 +29,14 @@ public class TiendaBackendClient {
     @PostConstruct
     void init(){
         webTargetBase = ClientBuilder.newClient().target(baseurl);
-        webTargetAuth = ClientBuilder.newClient().target(authurl);
+        webTargetAuth = ClientBuilder.newClient().target(clientes).path("findByEmailAndPass");
     }
 
     public ClienteDTO findByEmailAndPass(String correoe,String clave){
         UserDTO user = new UserDTO(correoe,clave);
         Invocation.Builder invocationBuilder = webTargetAuth.request(MediaType.APPLICATION_JSON);
         Response response = invocationBuilder.post(Entity.entity(user,MediaType.APPLICATION_JSON));
-        System.out.println("url: "+authurl);
+        System.out.println("url: "+clientes);
         System.out.println("Status: "+response.getStatus());
         if(response.getStatus() == 200){
             return (ClienteDTO) response.getEntity();
