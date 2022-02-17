@@ -13,8 +13,8 @@
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.javaee>8.0</version.javaee>
-        <version.payara>5.193</version.payara>
-        <version.microprofile>2.0.1</version.microprofile>
+        <version.payara>5.2022.1</version.payara>
+        <version.microprofile>3.2</version.microprofile>
         <http.port>7778</http.port>
         <instance.name>h2-database-service</instance.name>
         <payaramicro.propsfile>payaramicro.properties</payaramicro.propsfile>
