@@ -9,6 +9,8 @@ import javax.ws.rs.core.Response;
 import java.util.List;
 
 @Path("clientes")
+@Produces("application/json")
+@Consumes("application/json")
 public interface TiendaApiService {
     @POST
     @Path("/findByEmailAndPass")
