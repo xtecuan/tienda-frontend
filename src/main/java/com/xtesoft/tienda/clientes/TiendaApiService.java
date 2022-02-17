@@ -2,15 +2,17 @@ package com.xtesoft.tienda.clientes;
 
 import com.xtesoft.tienda.clientes.dto.ClienteDTO;
 import com.xtesoft.tienda.clientes.dto.UserDTO;
+import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
-@Path("clientes")
+@Path("/api/clientes")
 @Produces("application/json")
 @Consumes("application/json")
+@RegisterRestClient
 public interface TiendaApiService {
     @POST
     @Path("/findByEmailAndPass")
