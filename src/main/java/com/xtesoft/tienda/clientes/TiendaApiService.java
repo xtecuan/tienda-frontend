@@ -6,6 +6,7 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.List;
 
@@ -14,9 +15,11 @@ import java.util.List;
 @Consumes("application/json")
 @RegisterRestClient
 public interface TiendaApiService {
-    @POST
+    @GET
     @Path("/findByEmailAndPass")
-    public ClienteDTO getSingle(UserDTO user);
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces(MediaType.APPLICATION_JSON)
+    public ClienteDTO getSingle(@QueryParam("correoe")String correo,@QueryParam("clave")String clave);
 
     @GET
     public List<ClienteDTO> getAll();

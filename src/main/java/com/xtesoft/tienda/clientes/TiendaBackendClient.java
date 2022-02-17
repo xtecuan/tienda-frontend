@@ -28,7 +28,7 @@ public class TiendaBackendClient {
     public ClienteDTO findByEmailAndPass(String correoe,String clave){
         ClienteDTO clienteDTO = null;
         UserDTO user = new UserDTO(correoe,clave);
-        clienteDTO = tiendaApiService.getSingle(user);
+        clienteDTO = tiendaApiService.getSingle(correoe,clave);
         return clienteDTO;
     }
 }
