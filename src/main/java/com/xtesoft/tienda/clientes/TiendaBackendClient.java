@@ -36,7 +36,7 @@ public class TiendaBackendClient {
         UserDTO user = new UserDTO(correoe,clave);
         Invocation.Builder invocationBuilder = webTargetAuth.request(MediaType.APPLICATION_JSON);
         Response response = invocationBuilder.post(Entity.entity(user,MediaType.APPLICATION_JSON));
-        System.out.println("url: "+webTargetBase.getUri());
+        System.out.println("url: "+authurl);
         System.out.println("Status: "+response.getStatus());
         if(response.getStatus() == 200){
             return (ClienteDTO) response.getEntity();
