@@ -10,6 +10,9 @@ import javax.security.enterprise.identitystore.IdentityStore;
 import java.util.Arrays;
 import java.util.HashSet;
 import javax.inject.Inject;
+
+import com.xtesoft.tienda.clientes.TiendaBackendClient;
+import com.xtesoft.tienda.clientes.dto.ClienteDTO;
 import org.apache.log4j.Logger;
 
 @ApplicationScoped
@@ -18,7 +21,7 @@ public class CustomInMemoryIdentityStore implements IdentityStore {
     private static final Logger LOGGER = Logger.getLogger(CustomInMemoryIdentityStore.class);
 
     @Inject
-    private UsersFacade usersFacade;
+    private TiendaBackendClient tiendaBackendClient;
 
     @Override
     public CredentialValidationResult validate(Credential credential) {
@@ -29,12 +32,12 @@ public class CustomInMemoryIdentityStore implements IdentityStore {
 
         getLogger().info("Caller: " + email);
         getLogger().info("blankPassword: " + password);
-        getLogger().info("hashedPassword: " + usersFacade.getMyHashFromH2(password));
+        //getLogger().info("hashedPassword: " + usersFacade.getMyHashFromH2(password));
 
-        Users user = usersFacade.findByEmailAndPass(email, password);
+        ClienteDTO clienteDTO = tiendaBackendClient.findByEmailAndPass(email, password);
 
-        if (user != null) {
-            return new CredentialValidationResult(user.getEmail(), new HashSet<>(Arrays.asList(user.getWrole())));
+        if (clienteDTO != null) {
+            return new CredentialValidationResult(clienteDTO.getCorreoe(), new HashSet<>(Arrays.asList(clienteDTO.getRol())));
         } else {
             return CredentialValidationResult.NOT_VALIDATED_RESULT;
         }
