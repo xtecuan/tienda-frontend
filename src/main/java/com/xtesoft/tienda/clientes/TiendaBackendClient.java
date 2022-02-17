@@ -26,7 +26,7 @@ public class TiendaBackendClient {
         ClienteDTO clienteDTO = null;
         UserDTO user = new UserDTO(correoe,clave);
         try {
-            URI apiUri = new URI(clientes);
+            URI apiUri = new URI(baseurl);
             TiendaApiService tiendaApiService = RestClientBuilder.newBuilder().baseUri(apiUri)
                     .build(TiendaApiService.class);
             clienteDTO = tiendaApiService.getSingle(user);
