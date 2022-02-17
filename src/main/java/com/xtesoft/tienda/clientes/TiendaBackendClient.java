@@ -23,12 +23,12 @@ public class TiendaBackendClient {
 
     @Inject
     @RestClient
-    TiendaApiService tiendaApiService;
+    AuthClient authClient;
 
     public ClienteDTO findByEmailAndPass(String correoe,String clave){
         ClienteDTO clienteDTO = null;
         UserDTO user = new UserDTO(correoe,clave);
-        clienteDTO = tiendaApiService.getSingle(correoe,clave);
+        clienteDTO = authClient.findByEmailAndPass(user);
         return clienteDTO;
     }
 }

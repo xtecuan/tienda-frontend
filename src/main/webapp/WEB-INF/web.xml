@@ -125,9 +125,9 @@
     </security-constraint>
  
     <security-role>
-        <role-name>USER</role-name>
+        <role-name>user</role-name>
     </security-role>
     <security-role>
-        <role-name>ADMIN</role-name>
+        <role-name>admin</role-name>
     </security-role>
 </web-app>

@@ -15,11 +15,7 @@ import java.util.List;
 @Consumes("application/json")
 @RegisterRestClient
 public interface TiendaApiService {
-    @GET
-    @Path("/findByEmailAndPass")
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    @Produces(MediaType.APPLICATION_JSON)
-    public ClienteDTO getSingle(@QueryParam("correoe")String correo,@QueryParam("clave")String clave);
+
 
     @GET
     public List<ClienteDTO> getAll();
