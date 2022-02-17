@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="866a04ff-d216-47c4-9663-d8f9b4b18d27" name="Changes" comment="cambios deploy">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/xtesoft/tienda/clientes/AuthClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/xtesoft/tienda/clientes/AuthClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +83,7 @@
       <option name="presentableId" value="Default" />
       <updated>1645052400008</updated>
       <workItem from="1645052402226" duration="21029000" />
-      <workItem from="1645123132918" duration="822000" />
+      <workItem from="1645123132918" duration="1036000" />
     </task>
     <task id="LOCAL-00001" summary="cambios deploy">
       <created>1645052996777</created>
@@ -232,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645123747028</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="cambios deploy">
+      <created>1645123972654</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1645123972654</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -109,8 +109,8 @@
             <url-pattern>/app/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>ADMIN</role-name>
-            <role-name>USER</role-name>
+            <role-name>admin</role-name>
+            <role-name>user</role-name>
         </auth-constraint>
     </security-constraint>
     
@@ -120,7 +120,7 @@
             <url-pattern>/app/admin/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
-            <role-name>ADMIN</role-name>
+            <role-name>admin</role-name>
         </auth-constraint>
     </security-constraint>
  
