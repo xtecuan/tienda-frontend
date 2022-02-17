@@ -6,6 +6,7 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.Invocation;
@@ -15,6 +16,7 @@ import javax.ws.rs.core.Response;
 
 @ApplicationScoped
 public class TiendaBackendClient {
+    @Inject
     @ConfigProperty(name = "tienda.backend.baseurl")
     String baseurl;
     private WebTarget webTargetBase;
