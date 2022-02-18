@@ -1,6 +1,6 @@
 package de.rieckpil.blog;
 
-import com.livejournal.xtecuan.microprofile.facade.UsersFacade;
+
 import com.livejournal.xtecuan.microprofile.web.beans.utils.UserSessionBean;
 import com.livejournal.xtecuan.microprofile.web.beans.utils.XBaseBean;
 import com.xtesoft.tienda.clientes.TiendaBackendClient;

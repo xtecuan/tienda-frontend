@@ -10,7 +10,7 @@
  */
 package com.livejournal.xtecuan.microprofile.web.beans.utils;
 
-import com.livejournal.xtecuan.microprofile.entities.Users;
+
 import com.xtesoft.tienda.clientes.dto.ClienteDTO;
 
 import java.io.Serializable;

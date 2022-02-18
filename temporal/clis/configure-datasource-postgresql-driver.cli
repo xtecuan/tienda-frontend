@@ -1,8 +1,0 @@
-#Adds a datasource with overloadable parameters using system environment variables
-data-source add \
-  --name=tienda-frontend_pool \
-  --jndi-name=java:jboss/datasources/tienda-frontend_DS \
-  --driver-name=postgresql \
-  --connection-url=jdbc:postgresql://localhost:5432/sampledb \
-  --user-name=postgres \
-  --password=Welcome123$

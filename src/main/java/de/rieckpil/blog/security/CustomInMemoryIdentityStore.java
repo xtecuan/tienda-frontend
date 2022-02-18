@@ -1,7 +1,6 @@
 package de.rieckpil.blog.security;
 
-import com.livejournal.xtecuan.microprofile.entities.Users;
-import com.livejournal.xtecuan.microprofile.facade.UsersFacade;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.security.enterprise.credential.Credential;
 import javax.security.enterprise.credential.UsernamePasswordCredential;
