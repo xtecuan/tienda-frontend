@@ -52,7 +52,9 @@ public class LoginBacking extends XBaseBean {
 
     public void submit() throws IOException {
 
-        switch (continueAuthentication()) {
+        AuthenticationStatus status = continueAuthentication();
+        getLogger().info("Status: "+ status);
+        switch (status) {
             case SEND_CONTINUE:
                 currentUser.setUser(usersFacade.findByEmailAndPass(email, password));
                 facesContext.responseComplete();
@@ -65,7 +67,7 @@ public class LoginBacking extends XBaseBean {
                 currentUser.setUser(usersFacade.findByEmailAndPass(email, password));
                 facesContext.addMessage(null,
                         new FacesMessage(FacesMessage.SEVERITY_INFO, "Login succeed", null));
-                externalContext.redirect(externalContext.getRequestContextPath() + "/app/main.jsf");
+                externalContext.redirect(externalContext.getRequestContextPath() + "/app/main_new.jsf");
                 break;
             case NOT_DONE:
         }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <f:view>
+        <h:head>
+            <title>#{bundle.app_main_title}</title>
+            <style type="text/css">
+                .ui-row-editor .ui-row-editor-pencil {
+                    margin-left:8px;
+                }
+            </style>
+        </h:head>
+        <h:body>
+            <p:outputPanel>
+                <div class="ui-g">
+                    <div class="ui-g-3">      
+                        <p:outputLabel style="align-content: center">#{bundle.app_main_header}</p:outputLabel>
+                    </div>
+
+
+                    <div class="ui-g-3">  
+                        <h:form>
+                            <p:commandButton rendered="#{request.isUserInRole('ADMIN')}" value="#{bundle.app_main_dbconsole}" action="#{mainBean.dbconsole}"/>
+                        </h:form>
+                    </div>
+                    <div class="ui-g-3"> 
+                        <p:panelGrid  columns="3">
+                            <p:outputLabel>#{bundle.app_main_logged_in}</p:outputLabel>
+                            <p:outputLabel>#{loginBacking.currentUser.user.nombres} #{loginBacking.currentUser.user.apellidos}</p:outputLabel>
+                            <p:outputLabel>(#{loginBacking.currentUser.user.correoe})</p:outputLabel>
+                        </p:panelGrid>
+                    </div>
+                    <div class="ui-g-3">  
+                        <h:form>
+                            <p:commandButton value="#{bundle.app_main_logout}" action="#{logoutBacking.submit}"/>  
+                        </h:form>
+                    </div>
+
+                </div>
+            </p:outputPanel>
+            <p:spacer height="100"/>
+
+
+
+        </h:body>
+    </f:view>
+</html>

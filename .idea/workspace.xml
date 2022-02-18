@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="866a04ff-d216-47c4-9663-d8f9b4b18d27" name="Changes" comment="cambios deploy">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/app/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/app/main.xhtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/app/main_new.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/rieckpil/blog/LoginBacking.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/rieckpil/blog/LoginBacking.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +50,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/MINED/SGIPD/codigo/sigobsol-documents-loader" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -83,7 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1645052400008</updated>
       <workItem from="1645052402226" duration="21029000" />
-      <workItem from="1645123132918" duration="1902000" />
+      <workItem from="1645123132918" duration="3192000" />
     </task>
     <task id="LOCAL-00001" summary="cambios deploy">
       <created>1645052996777</created>
@@ -253,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645141244570</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="cambios deploy">
+      <created>1645141602881</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1645141602881</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
