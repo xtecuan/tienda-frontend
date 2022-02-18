@@ -20,11 +20,7 @@
                     </div>
 
 
-                    <div class="ui-g-3">  
-                        <h:form>
-                            <p:commandButton rendered="#{request.isUserInRole('admin')}" value="#{bundle.app_main_dbconsole}" action="#{mainBean.dbconsole}"/>
-                        </h:form>
-                    </div>
+
                     <div class="ui-g-3"> 
                         <p:panelGrid  columns="3">
                             <p:outputLabel>#{bundle.app_main_logged_in}</p:outputLabel>

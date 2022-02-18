@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.xtesoft.tienda</groupId>
@@ -20,50 +21,8 @@
         <payaramicro.propsfile>payaramicro.properties</payaramicro.propsfile>
         <maven.compiler.release>11</maven.compiler.release>
     </properties>
-    
+
     <dependencies>
-        <!--<dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.core</artifactId>
-            <version>2.7.4</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.asm</artifactId>
-            <version>2.7.4</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.antlr</artifactId>
-            <version>2.7.4</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa</artifactId>
-            <version>2.7.4</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.jpql</artifactId>
-            <version>2.7.4</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>javax.persistence</artifactId>
-            <version>2.2.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>2.7.4</version>
-            <scope>provided</scope>
-        </dependency>-->
         <dependency>
             <groupId>org.eclipse.microprofile</groupId>
             <artifactId>microprofile</artifactId>
@@ -71,12 +30,6 @@
             <scope>provided</scope>
             <type>pom</type>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
-        <!--<dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
-            <version>2.1.210</version>
-        </dependency>-->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -95,12 +48,12 @@
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>6.2</version>
+            <version>10.0.0</version>
         </dependency>
-        <dependency>  
-            <groupId>org.primefaces.themes</groupId>  
-            <artifactId>all-themes</artifactId>  
-            <version>1.0.10</version>  
+        <dependency>
+            <groupId>org.primefaces.themes</groupId>
+            <artifactId>all-themes</artifactId>
+            <version>1.0.10</version>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
@@ -149,15 +102,15 @@
                             <key>--deploy</key>
                             <value>${project.build.directory}/${project.build.finalName}</value>
                         </option>
-                        
-                       
+
+
                     </commandLineOptions>
                 </configuration>
             </plugin>
         </plugins>
         <finalName>tienda-frontend</finalName>
     </build>
-    <description>H2 Database Service Listener</description>
+    <description>tienda-frontend</description>
     <repositories>
         <repository>
             <url>http://repository.primefaces.org/</url>
@@ -165,6 +118,5 @@
             <layout>default</layout>
             <name>Repository for library PrimeFaces-maven-lib</name>
         </repository>
-       
     </repositories>
 </project>
