@@ -59,6 +59,9 @@
     <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Work\Promerica\tienda-main\tienda-frontend\src\main\webapp\app" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.xtesoft.tienda.clientes.dto" />
     </key>
